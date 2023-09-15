@@ -2,30 +2,34 @@
 
 namespace App\Controllers;
 
+use App\Models\AnggotaModel;
+
 class Pages extends BaseController
 {
+    protected $anggotaModel;
+    public function __construct()
+    {
+        $this->anggotaModel = new AnggotaModel();
+    }
     public function index()
     {
         $data = [
-            'title' => 'Home | WebBelajar'
+            'title' => 'Ade | BelajarWeb'
         ];
-        return view('pages/home', $data);
-    }
-
-    public function about()
-    {
-        $data = [
-            'title' => 'About Me'
-        ];
-        return view('pages/about', $data);
+        return view('pages/index', $data);
     }
 
 
-    public function contact()
+    public function table()
     {
+        $anggota = $this->anggotaModel->findAll();
+
         $data = [
-            'title' => 'Contact Us'
+            'title' => 'Tabel Anggota',
+            'anggota' => $anggota
         ];
-        return view('pages/contact', $data);
+
+
+        return view('pages/table', $data);
     }
 }
