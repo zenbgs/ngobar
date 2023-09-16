@@ -11,7 +11,6 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Sidebar Start -->
     <div class="sidebar pe-4 pb-3">
         <nav class="navbar bg-secondary navbar-dark">
@@ -65,52 +64,40 @@
         <!-- Navbar End -->
 
 
-        <!-- Table Start -->
+        <!-- Form Start -->
         <div class="container-fluid pt-4 px-4">
             <div class="row g-4">
-                <div class="col-12">
+                <div class="col-md-12">
                     <div class="bg-secondary rounded h-100 p-4">
-                        <h6 class="mb-4">Tabel Anggota</h6>
-                        <a href="/formtambah" class="btn btn-primary" onclick="">Tambah</a>
+                        <h6 class="mb-4">Tambah Anggota</h6>
+                        <form>
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="Country" class="form-label">Country</label>
+                                <input type="text" class="form-control" id="Country" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
 
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Country</th>
-                                        <th scope="col">Action</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $i = 1; ?>
-                                    <?php foreach ($anggota as $k) : ?>
-                                        <tr>
-                                            <th scope="row"><?= $i++; ?></th>
-                                            <td><?= $k['first_name']; ?></td>
-                                            <td><?= $k['last_name']; ?></td>
-                                            <td><?= $k['email']; ?></td>
-                                            <td><?= $k['kota']; ?></td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a href="edit.html" class="btn btn-success" style="margin-right: 10px;">Edit</a>
-                                                    <a href="#" onclick="ade(<?= $k['id'] ?>)" class="btn btn-sm btn-danger">Delete</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </div>
+                            <div class="btn-group">
+                                <a href="/table" type="submit" class="btn btn-success" style="margin-right: 10px; ">Tambah</a>
+                                <a href="/table" type="button" class="btn btn-danger">Cancel</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Table End -->
+        <!-- Form End -->
 
 
         <!-- Footer Start -->
@@ -136,9 +123,5 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 </div>
-
-
-
-
 
 <?= $this->endSection(); ?>

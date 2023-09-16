@@ -35,12 +35,68 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        .explosion {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            pointer-events: none;
+        }
+
+        .explosion .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: pop 1s reverse forwards;
+        }
+
+        @keyframes pop {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                top: 50%;
+                left: 50%;
+                opacity: 1;
+            }
+        }
+
+        html,
+        body {
+            height: 100%;
+            background: #000;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            color: #ccc;
+            font-family: "Helvetica", "Arial", sans-serif;
+            user-select: none;
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Chrome/Safari/Opera */
+            -moz-user-select: none;
+            /* Firefox */
+            cursor: default;
+        }
+    </style>
+
 </head>
 
 <body>
 
+    <div id="app">
+        <div id="hero">
+            <?= $this->renderSection('content'); ?>
+        </div>
+    </div>
 
-    <?= $this->renderSection('content'); ?>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -54,14 +110,17 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="js/soft-ui-dashboard.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+
+
 
     <!-- Template Javascript -->
     <script src="/js/main.js"></script>
     <script>
-        function ade() {
+        function ade(id) {
             Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
+                title: 'Apakah kamu yakin?',
+                text: "Data yang telah dihapus tidak bisa dikembalikan!",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -69,15 +128,97 @@
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
+                    $.ajax({
+                        url: "/table/delete/" + id,
+                        type: "get", //send it through get method
+                        success: function(response) {
+                            Swal.fire({
+                                icon: 'success',
+                                // title: 'menutup jendela...',
+                                html: 'menutup jendela di <b></b> milliseconds.',
+                                showConfirmButton: false,
+                                timer: 1500,
+                                timerProgressBar: true,
+                                didOpen: () => {
+                                    const duration = 15 * 1000,
+                                        animationEnd = Date.now() + duration,
+                                        defaults = {
+                                            startVelocity: 30,
+                                            spread: 360,
+                                            ticks: 60,
+                                            zIndex: 0
+                                        };
+
+                                    function randomInRange(min, max) {
+                                        return Math.random() * (max - min) + min;
+                                    }
+
+                                    const interval = setInterval(function() {
+                                        const timeLeft = animationEnd - Date.now();
+
+                                        if (timeLeft <= 0) {
+                                            return clearInterval(interval);
+                                        }
+
+                                        const particleCount = 50 * (timeLeft / duration);
+
+                                        // since particles fall down, start a bit higher than random
+                                        confetti(
+                                            Object.assign({}, defaults, {
+                                                particleCount,
+                                                origin: {
+                                                    x: randomInRange(0.1, 0.3),
+                                                    y: Math.random() - 0.2
+                                                },
+                                            })
+                                        );
+                                        confetti(
+                                            Object.assign({}, defaults, {
+                                                particleCount,
+                                                origin: {
+                                                    x: randomInRange(0.7, 0.9),
+                                                    y: Math.random() - 0.2
+                                                },
+                                            })
+                                        );
+                                    }, 250);
+                                    Swal.showLoading()
+                                    const b = Swal.getHtmlContainer().querySelector('b')
+                                    timerInterval = setInterval(() => {
+                                        b.textContent = Swal.getTimerLeft()
+                                    }, 100)
+                                },
+                                willClose: () => {
+                                    clearInterval(timerInterval)
+                                }
+                            }).then((result) => {
+                                window.location.reload();
+                            })
+                        },
+                        error: function(xhr) {
+                            //Do Something to handle error
+                        }
+                    });
                 }
+
+
             })
         }
     </script>
+
+    <?php
+    if (isset($_SESSION['titid'])) {
+    ?>
+        <script>
+            Swal.fire(
+                'Hahahaha',
+                'Iyoai :)',
+                'success'
+            )
+        </script>
+    <?php } ?>
+
+
 </body>
 
 </html>

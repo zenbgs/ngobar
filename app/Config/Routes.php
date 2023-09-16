@@ -7,3 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Pages::index');
 $routes->get('/table', 'Pages::table');
+$routes->get('/formtambah', 'Pages::formtambah');
+$routes->get('/table/delete/(:num)', 'Pages::delete/$1');
