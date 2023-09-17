@@ -48,16 +48,16 @@ class Pages extends BaseController
         // jika data valid, simpan ke database
         if ($isDataValid) {
             $this->anggotaModel->insert([
-                "first_name" => $this->request->getPost('firs_tname'),
+                "first_name" => $this->request->getPost('first_name'),
                 "last_name" => $this->request->getPost('last_name'),
                 "email" => $this->request->getPost('email'),
-                "kota" => $this->request->getPost('kota'),
+                "country" => $this->request->getPost('country'),
             ]);
-            return redirect('pages/table');
+            return redirect('table');
         }
 
         // tampilkan form create
-        return view('pages/formtambah', $data);
+        echo view('pages/formtambah', $data);
     }
 
     public function delete($id)

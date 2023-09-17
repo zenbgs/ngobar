@@ -94,7 +94,7 @@
                                             <td><?= $k['first_name']; ?></td>
                                             <td><?= $k['last_name']; ?></td>
                                             <td><?= $k['email']; ?></td>
-                                            <td><?= $k['kota']; ?></td>
+                                            <td><?= $k['country']; ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                     <a href="edit.html" class="btn btn-success" style="margin-right: 10px;">Edit</a>
