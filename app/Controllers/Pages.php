@@ -35,14 +35,28 @@ class Pages extends BaseController
         return view('pages/table', $data);
     }
 
-    public function formtambah()
+    public function create()
     {
-
+        // lakukan validasi
         $data = [
             'title' => 'Tambah Anggota',
         ];
+        $validation =  \Config\Services::validation();
+        $validation->setRules(['first_name' => 'required']);
+        $isDataValid = $validation->withRequest($this->request)->run();
 
+        // jika data valid, simpan ke database
+        if ($isDataValid) {
+            $this->anggotaModel->insert([
+                "first_name" => $this->request->getPost('firs_tname'),
+                "last_name" => $this->request->getPost('last_name'),
+                "email" => $this->request->getPost('email'),
+                "kota" => $this->request->getPost('kota'),
+            ]);
+            return redirect('pages/table');
+        }
 
+        // tampilkan form create
         return view('pages/formtambah', $data);
     }
 

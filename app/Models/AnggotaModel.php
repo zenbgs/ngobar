@@ -11,5 +11,5 @@ class AnggotaModel extends Model
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['firstname', 'lastname', 'email', 'kota'];
+    protected $allowedFields = ['first_name', 'last_name', 'email', 'kota'];
 }

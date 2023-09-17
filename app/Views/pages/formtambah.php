@@ -70,28 +70,27 @@
                 <div class="col-md-12">
                     <div class="bg-secondary rounded h-100 p-4">
                         <h6 class="mb-4">Tambah Anggota</h6>
-                        <form>
+                        <form action="" method="post" id="text-editor">
                             <div class="mb-3">
                                 <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="firstName" value="">
+                                <input type="text" name="firstname" class="form-control" id="firstName">
                             </div>
                             <div class="mb-3">
                                 <label for="lastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" value="">
-                            </div>
-                            <div class="mb-3">
-                                <label for="Country" class="form-label">Country</label>
-                                <input type="text" class="form-control" id="Country" value="">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            </div>
+                                <input type="text" name="lastname" class="form-control" id="lastName">
+                                <div class="mb-3">
+                                    <label for="Country" class="form-label">Country</label>
+                                    <input type="text" name="country" class="form-control" id="Country">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
 
-                            <div class="btn-group">
-                                <a href="/table" type="submit" class="btn btn-success" style="margin-right: 10px; ">Tambah</a>
-                                <a href="/table" type="button" class="btn btn-danger">Cancel</a>
-                            </div>
+                                <div class="btn-group">
+                                    <button type="submit" name="status" value="published" class="btn btn-success" style="margin-right: 10px; ">Tambah</button>
+                                    <a href="/table" type="button" class="btn btn-danger">Cancel</a>
+                                </div>
                         </form>
                     </div>
                 </div>
