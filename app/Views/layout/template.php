@@ -2,120 +2,110 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title><?= $title; ?></title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="<?= base_url(); ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link rel="stylesheet" href="<?= base_url(); ?>css/bootstrap.min.css">
-
-
-    <!-- Template Stylesheet -->
-    <link rel="stylesheet" href="<?= base_url(); ?>css/ui-dashboard.css">
-    <link href="<?= base_url(); ?>css/style.css" rel="stylesheet">
-
-    <!-- My CSS -->
-    <link rel="stylesheet" href="<?= base_url(); ?>css/style.css">
-
-    <style>
-        .explosion {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            pointer-events: none;
-        }
-
-        .explosion .particle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            animation: pop 1s reverse forwards;
-        }
-
-        @keyframes pop {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                top: 50%;
-                left: 50%;
-                opacity: 1;
-            }
-        }
-
-        html,
-        body {
-            height: 100%;
-            background: #000;
-        }
-
-        h1 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -100%);
-            color: #ccc;
-            font-family: "Helvetica", "Arial", sans-serif;
-            user-select: none;
-            -webkit-touch-callout: none;
-            /* iOS Safari */
-            -webkit-user-select: none;
-            /* Chrome/Safari/Opera */
-            -moz-user-select: none;
-            /* Firefox */
-            cursor: default;
-        }
-    </style>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="" />
+    <title><?= $title ?></title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="<?= base_url(); ?>assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="<?= base_url(); ?>assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="<?= base_url(); ?>assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="<?= base_url(); ?>assets/css/soft-ui-dashboard.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="g-sidenav-show bg-gray-100">
 
-    <div id="app">
-        <div id="hero">
-            <?= $this->renderSection('content'); ?>
-        </div>
+    <?= $this->include('layout/sidebar'); ?>
+    <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+    <div class="container-fluid py-4">
+    <?= $this->include('layout/navbar'); ?>
+    <?= $this->renderSection('content'); ?>
+    <?= $this->include('layout/footer') ?>
     </div>
+    </main>
+    <?= $this->include('layout/configurator'); ?>
 
+    <!--   Core JS Files   -->
+    <script src="<?= base_url(); ?>assets/js/core/popper.min.js?v=1.0"></script>
+    <script src="<?= base_url(); ?>assets/js/core/bootstrap.min.js?v=1.0"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/dragula.min.js?v=1.0"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/jkanban.js?v=1.0"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/tilt.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/quill.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/choices.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/flatpickr.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/plugins/dropzone.min.js"></script>
+    <script>
+        if (document.getElementById("editor")) {
+            var quill = new Quill("#editor", {
+                theme: "snow", // Specify theme in configuration
+            });
+        }
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url(); ?>lib/chart/chart.min.js"></script>
-    <script src="<?= base_url(); ?>lib/easing/easing.min.js"></script>
-    <script src="<?= base_url(); ?>lib/waypoints/waypoints.min.js"></script>
-    <script src="<?= base_url(); ?>lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="<?= base_url(); ?>lib/tempusdominus/js/moment.min.js"></script>
-    <script src="<?= base_url(); ?>lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="<?= base_url(); ?>lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="<?= base_url(); ?>js/soft-ui-dashboard.min.js"></script>
+        if (document.getElementById("choices-multiple-remove-button")) {
+            var element = document.getElementById("choices-multiple-remove-button");
+            const example = new Choices(element, {
+                removeItemButton: true,
+            });
+
+            example.setChoices(
+                [{
+                        value: "One",
+                        label: "Label One",
+                        disabled: true,
+                    },
+                    {
+                        value: "Two",
+                        label: "Label Two",
+                        selected: true,
+                    },
+                    {
+                        value: "Three",
+                        label: "Label Three",
+                    },
+                ],
+                "value",
+                "label",
+                false
+            );
+        }
+
+        if (document.querySelector(".datetimepicker")) {
+            flatpickr(".datetimepicker", {
+                allowInput: true,
+            }); // flatpickr
+        }
+
+        Dropzone.autoDiscover = false;
+        var drop = document.getElementById("dropzone");
+        var myDropzone = new Dropzone(drop, {
+            url: "/file/post",
+            addRemoveLinks: true,
+        });
+    </script>
+    <script>
+        var win = navigator.platform.indexOf("Win") > -1;
+        if (win && document.querySelector("#sidenav-scrollbar")) {
+            var options = {
+                damping: "0.5",
+            };
+            Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="<?= base_url(); ?>assets/js/soft-ui-dashboard.js?v=1.0.8"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
-
-
-
-    <!-- Template Javascript -->
-    <script src="<?= base_url(); ?>js/main.js"></script>
     <script>
         function ade(id) {
             Swal.fire({
@@ -205,19 +195,6 @@
             })
         }
     </script>
-
-    <?php
-    if (isset($_SESSION['titid'])) {
-    ?>
-        <script>
-            Swal.fire(
-                'Hahahaha',
-                'Iyoai :)',
-                'success'
-            )
-        </script>
-    <?php } ?>
-
 
 </body>
 

@@ -27,12 +27,14 @@ class Pages extends BaseController
         $anggota = $this->anggotaModel->findAll();
 
         $data = [
-            'title' => 'Tabel Anggota',
+            'title' => 'Table Anggota',
+            'slug_title' => 'Table',
+            'slug_sub_title' => 'Table Anggota',
             'anggota' => $anggota
         ];
 
 
-        return view('pages/table', $data);
+        return view('pages/table/table', $data);
     }
 
     public function create()
