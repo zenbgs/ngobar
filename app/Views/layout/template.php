@@ -21,19 +21,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="<?= base_url(); ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>css/bootstrap.min.css">
 
 
     <!-- Template Stylesheet -->
-    <link rel="stylesheet" href="css/ui-dashboard.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url(); ?>css/ui-dashboard.css">
+    <link href="<?= base_url(); ?>css/style.css" rel="stylesheet">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>css/style.css">
 
     <style>
         .explosion {
@@ -101,21 +101,21 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/chart/chart.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="js/soft-ui-dashboard.min.js"></script>
+    <script src="<?= base_url(); ?>lib/chart/chart.min.js"></script>
+    <script src="<?= base_url(); ?>lib/easing/easing.min.js"></script>
+    <script src="<?= base_url(); ?>lib/waypoints/waypoints.min.js"></script>
+    <script src="<?= base_url(); ?>lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= base_url(); ?>lib/tempusdominus/js/moment.min.js"></script>
+    <script src="<?= base_url(); ?>lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="<?= base_url(); ?>lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="<?= base_url(); ?>js/soft-ui-dashboard.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
 
 
 
     <!-- Template Javascript -->
-    <script src="/js/main.js"></script>
+    <script src="<?= base_url(); ?>js/main.js"></script>
     <script>
         function ade(id) {
             Swal.fire({
