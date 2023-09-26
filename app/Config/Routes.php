@@ -13,6 +13,9 @@ $routes->get('/', static function () {
   ];
   return view('pages/dashboard/dashboard', $data);
 });
-$routes->get('/table', 'Pages::table');
-$routes->add('/table/new', 'Pages::create');
-$routes->get('/table/delete/(:num)', 'Pages::delete/$1');
+$routes->group('table', static function ($routes) {
+  $routes->get('', 'Pages::table');
+  $routes->post('add', 'Pages::create');
+  $routes->delete('delete/(:num)', 'Pages::delete/$1');
+  $routes->post('edit/(:num)', 'Pages::edit/$1');
+});

@@ -30,8 +30,10 @@
     </div>
     </main>
     <?= $this->include('layout/configurator'); ?>
+    <?= $this->include('layout/toastmessage'); ?>
 
     <!--   Core JS Files   -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="<?= base_url(); ?>assets/js/core/popper.min.js?v=1.0"></script>
     <script src="<?= base_url(); ?>assets/js/core/bootstrap.min.js?v=1.0"></script>
     <script src="<?= base_url(); ?>assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -43,6 +45,8 @@
     <script src="<?= base_url(); ?>assets/js/plugins/choices.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/plugins/flatpickr.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/plugins/dropzone.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/custom.js"></script>
+    <?= $this->include('layout/triggertoast'); ?>
     <script>
         if (document.getElementById("editor")) {
             var quill = new Quill("#editor", {

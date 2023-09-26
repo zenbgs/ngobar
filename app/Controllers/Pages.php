@@ -24,7 +24,7 @@ class Pages extends BaseController
 
     public function table()
     {
-        $anggota = $this->anggotaModel->findAll();
+        $anggota = $this->anggotaModel->asObject()->findAll();
 
         $data = [
             'title' => 'Table Anggota',
@@ -32,7 +32,6 @@ class Pages extends BaseController
             'slug_sub_title' => 'Table Anggota',
             'anggota' => $anggota
         ];
-
 
         return view('pages/table/table', $data);
     }
