@@ -10,19 +10,19 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="first_name" class="col-form-label">First Name</label>
+                    <label for="first_name" class="form-label">First Name</label>
                     <input type="text" class="form-control first_name" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="last_name" class="col-form-label">Last Name</label>
+                    <label for="last_name" class="form-label">Last Name</label>
                     <input type="text" class="form-control last_name" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="email" class="col-form-label">Email</label>
+                    <label for="email" class="form-label">Email</label>
                     <input type="text" class="form-control email" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="country" class="col-form-label">Country</label>
+                    <label for="country" class="form-label">Country</label>
                     <input type="text" class="form-control country" readonly>
                 </div>
             </div>
