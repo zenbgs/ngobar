@@ -7,7 +7,7 @@
         <div class="card mb-4">
             <div class="card-header pb-0">
                 <h6 style="float:left !important"><?= $title; ?></h6>
-                <a href="<?= base_url('admin/berita/tambah_single') ?>"
+                <a href="<?= base_url('table/add') ?>"
                     class="btn btn-icon btn-sm bg-gradient-success pull-right" style="float: right !important;"
                     type="button">
                     <span class="btn-inner--icon"><i class="fas fa-plus" aria-hidden="true"></i></span>
@@ -50,8 +50,14 @@
                                     <p class="text-xs text-center text-secondary mb-0"><?= $anggota->country ?></p>
                                 </td>
                                 <td class="align-middle">
-                                    <a href="#"
-                                        class="text-gradient text-success font-weight-bold text-xs"
+                                    <a href="javascript:;"
+                                        class="text-gradient btn-view text-success font-weight-bold text-xs"
+                                        data-id="<?= $anggota->id ?>"
+                                        data-first_name = "<?= $anggota->first_name ?>"
+                                        data-last_name = "<?= $anggota->last_name ?>"
+                                        data-email = "<?= $anggota->email ?>"
+                                        data-country = "<?= $anggota->country ?>"
+                                        data-toggle="tooltip"
                                         data-original-title="Lihat anggota">
                                         View
                                     </a>
@@ -76,5 +82,7 @@
         </div>
     </div>
 </div>
+
+<?= $this->include('pages/table/modal') ?>
 
 <?= $this->endSection(); ?>
