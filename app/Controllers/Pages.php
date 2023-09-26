@@ -6,12 +6,12 @@ use App\Models\AnggotaModel;
 
 class Pages extends BaseController
 {
-    protected $anggotaModel;
-    protected $session;
+    protected $session, $validation, $anggotaModel;
     public function __construct()
     {
         $this->anggotaModel = new AnggotaModel();
         $this->session = \Config\Services::session();
+        $this->validation = \Config\Services::validation();
     }
     public function index()
     {
@@ -38,13 +38,8 @@ class Pages extends BaseController
 
     public function create()
     {
-        // lakukan validasi
-        $data = [
-            'title' => 'Tambah Anggota',
-        ];
-        $validation =  \Config\Services::validation();
-        $validation->setRules(['first_name' => 'required']);
-        $isDataValid = $validation->withRequest($this->request)->run();
+        $this->validation->setRules(['first_name' => 'required']);
+        $isDataValid = $this->validation->withRequest($this->request)->run();
 
         // jika data valid, simpan ke database
         if ($isDataValid) {
@@ -54,11 +49,9 @@ class Pages extends BaseController
                 "email" => $this->request->getPost('email'),
                 "country" => $this->request->getPost('country'),
             ]);
+            $this->session->setFlashdata('success', 'Yeay! Success add data');
             return redirect('table');
         }
-
-        // tampilkan form create
-        echo view('pages/formtambah', $data);
     }
 
     public function delete($id)
