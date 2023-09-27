@@ -17,5 +17,5 @@ $routes->group('table', static function ($routes) {
   $routes->get('', 'Pages::table');
   $routes->post('add', 'Pages::create');
   $routes->delete('delete/(:num)', 'Pages::delete/$1');
-  $routes->post('edit/(:num)', 'Pages::edit/$1');
+  $routes->post('edit', 'Pages::edit/$1');
 });

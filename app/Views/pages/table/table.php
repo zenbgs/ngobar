@@ -50,11 +50,11 @@
                                             View
                                         </a>
                                         &nbsp;
-                                        <a href="#" class="text-gradient text-warning font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit anggota">
+                                        <a href="javascript:;" class="text-gradient btn-edit text-warning font-weight-bold text-xs" data-id="<?= $anggota->id ?>" data-first_name="<?= $anggota->first_name ?>" data-last_name="<?= $anggota->last_name ?>" data-email="<?= $anggota->email ?>" data-country="<?= $anggota->country ?>" data-toggle="tooltip" data-original-title="Edit anggota">
                                             Edit
                                         </a>
                                         &nbsp;
-                                        <a href="javascript:;" class="text-gradient text-danger font-weight-bold text-xs" title="Hapus anggota" data-bs-toggle="modal" data-bs-target="#hapus<?= $anggota->id ?>">
+                                        <a href="javascript:;" onclick="delete_dynamic(<?= $anggota->id ?>,'/table/delete/','delete')" class="text-gradient text-danger font-weight-bold text-xs" title="Hapus anggota" data-bs-toggle="modal" data-bs-target="#hapus<?= $anggota->id ?>">
                                             Delete
                                         </a>
                                     </td>

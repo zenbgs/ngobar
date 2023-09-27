@@ -54,11 +54,35 @@ class Pages extends BaseController
         }
     }
 
+    public function edit()
+    {
+        $this->validation->setRules([
+            'id' => 'required',
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'country' => 'required'
+        ]);
+        $isDataValid = $this->validation->withRequest($this->request)->run();
+        if ($isDataValid) {
+            $id = $this->request->getPost('id');
+            $this->anggotaModel->update($id, [
+                "first_name" => $this->request->getPost('first_name'),
+                "last_name" => $this->request->getPost('last_name'),
+                "email" => $this->request->getPost('email'),
+                "country" => $this->request->getPost('country')
+            ]);
+            $this->session->setFlashdata('success', 'Yeay! success edit data');
+            return redirect('table');
+        }
+    }
+
     public function delete($id)
     {
         // $this->session->setFlashdata('titid', 'delete');
         // unset($_SESSION['titid']);
         $this->anggotaModel->delete($id);
+        $this->session->setFlashdata('success', 'Yeay! success remove data');
         // return redirect('table');
     }
 }
