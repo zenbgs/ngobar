@@ -17,6 +17,7 @@
     <link href="<?= base_url(); ?>assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="<?= base_url(); ?>assets/css/soft-ui-dashboard.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
@@ -45,6 +46,7 @@
     <script src="<?= base_url(); ?>assets/js/plugins/choices.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/plugins/flatpickr.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/plugins/dropzone.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/custom.js?v=1.0"></script>
     <script src="<?= base_url() ?>assets/js/service.js"></script>
     <?= $this->include('layout/triggertoast'); ?>
@@ -53,7 +55,7 @@
     <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="<?= base_url(); ?>assets/js/soft-ui-dashboard.js?v=1.0.8"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+    
 
 </body>
 

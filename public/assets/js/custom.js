@@ -55,6 +55,17 @@ if (document.querySelector(".datetimepicker")) {
   }); // flatpickr
 }
 
+$('.team').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: false,
+  arrows: false,
+  autoplay: true,
+  autoplayspeed: 500,
+});
+
 Dropzone.autoDiscover = false;
 var drop = document.getElementById("dropzone");
 var myDropzone = new Dropzone(drop, {

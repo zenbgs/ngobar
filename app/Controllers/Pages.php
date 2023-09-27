@@ -79,10 +79,7 @@ class Pages extends BaseController
 
     public function delete($id)
     {
-        // $this->session->setFlashdata('titid', 'delete');
-        // unset($_SESSION['titid']);
         $this->anggotaModel->delete($id);
         $this->session->setFlashdata('success', 'Yeay! success remove data');
-        // return redirect('table');
     }
 }

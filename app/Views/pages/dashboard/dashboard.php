@@ -5,16 +5,16 @@
 
 <div class="row">
   <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-    <div class="card">
+    <div class="card tilt" data-tilt>
       <div class="card-body p-3">
         <div class="row">
           <div class="col-8">
             <div class="numbers">
               <p class="text-sm mb-0 text-capitalize font-weight-bold">
-                Total Pengguna
+                Team Dev
               </p>
               <h5 class="font-weight-bolder mb-0">
-                62
+                3
                 <!-- <span class="text-success text-sm font-weight-bolder">+55%</span> -->
               </h5>
             </div>
@@ -29,16 +29,16 @@
     </div>
   </div>
   <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-    <div class="card">
+    <div class="card tilt" data-tilt>
       <div class="card-body p-3">
         <div class="row">
           <div class="col-8">
             <div class="numbers">
               <p class="text-sm mb-0 text-capitalize font-weight-bold">
-                Total Berita
+                Feature
               </p>
               <h5 class="font-weight-bolder mb-0">
-                101
+                1
                 <!-- <span class="text-success text-sm font-weight-bolder">+3%</span> -->
               </h5>
             </div>
@@ -53,13 +53,13 @@
     </div>
   </div>
   <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-    <div class="card">
+    <div class="card tilt" data-tilt>
       <div class="card-body p-3">
         <div class="row">
           <div class="col-8">
             <div class="numbers">
               <p class="text-sm mb-0 text-capitalize font-weight-bold">
-                Berita Terbaru
+                Meet Total
               </p>
               <h5 class="font-weight-bolder mb-0">
                 5
@@ -70,30 +70,6 @@
           <div class="col-4 text-end">
             <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
               <i class="ni ni-folder-17 text-lg opacity-10" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-xl-3 col-sm-6">
-    <div class="card">
-      <div class="card-body p-3">
-        <div class="row">
-          <div class="col-8">
-            <div class="numbers">
-              <p class="text-sm mb-0 text-capitalize font-weight-bold">
-                Sales
-              </p>
-              <h5 class="font-weight-bolder mb-0">
-                $103,430
-                <span class="text-success text-sm font-weight-bolder">+5%</span>
-              </h5>
-            </div>
-          </div>
-          <div class="col-4 text-end">
-            <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-              <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -111,13 +87,8 @@
               <p class="mb-1 pt-2 text-bold">Selamat Datang,</p>
               <h5 class="font-weight-bolder">Team NgobarUwu 😄</h5>
               <p class="mb-5">
-                From colors, cards, typography to complex elements, you
-                will find the full documentation.
+                Sebuah platform sebagai workspace team menggunakan framework CodeIgniter 4
               </p>
-              <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                Read More
-                <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-              </a>
             </div>
           </div>
           <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
@@ -132,67 +103,248 @@
       </div>
     </div>
   </div>
-  <div class="col-lg-5">
-    <div class="card h-100 p-3">
-      <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/ivancik.jpg')">
+  <div class="col-lg-5 team">
+    <div class="card tilt h-100 p-3" data-tilt>
+      <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('<?= base_url() ?>assets/img/team/image1.jpg'); background-position-y: 20%;">
         <span class="mask bg-gradient-dark"></span>
         <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
           <h5 class="text-white font-weight-bolder mb-4 pt-2">
-            Artikel
+            Team Dev
           </h5>
           <p class="text-white">
-            Wealth creation is an evolutionarily recent positive-sum
-            game. It is all about who take the opportunity first.
+            Platform NgobarUwu adalah karya 3 orang dev yaitu chandra,zen, dan refi yang mana mereka adalah mahasiswa aktif pada kampus institut asia malang.
           </p>
-          <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-            Read More
-            <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card tilt h-100 p-3" data-tilt>
+      <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('<?= base_url() ?>assets/img/team/image2.jpg'); background-position-y: 20%;">
+        <span class="mask"></span>
+        <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
+          <h5 class="text-white font-weight-bolder mb-4 pt-2">
+            Team Dev
+          </h5>
+          <p class="text-white">
+            Platform NgobarUwu adalah karya 3 orang dev yaitu chandra,zen, dan refi yang mana mereka adalah mahasiswa aktif pada kampus institut asia malang.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div class="row mt-4">
-  <div class="col-lg-6 mb-lg-0 mb-4">
+  <div class="col-lg-8 col-12">
     <div class="card">
       <div class="card-header p-3">
-        <h5 class="mb-0">Notifications</h5>
-        <p class="text-sm mb-0">
-          Notifications on this page use Toasts from Bootstrap. Read
-          more details
-          <a href="https://getbootstrap.com/docs/5.0/components/toasts/" target="
-                      ">here</a>.
-        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <h6 class="mb-0">To do list</h6>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <small>01 - 31 October 2023</small>
+          </div>
+        </div>
+        <hr class="horizontal dark mb-0">
       </div>
+      <div class="card-body p-3 pt-0">
+        <ul class="list-group list-group-flush" data-toggle="checklist">
+          <li class="list-group-item border-0 flex-column align-items-start ps-0 py-0 mb-3">
+            <div class="checklist-item checklist-item-primary ps-2 ms-3">
+              <div class="d-flex align-items-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+                <h6 class="mb-0 text-dark font-weight-bold text-sm">CRUD Table anggota</h6>
+                <div class="dropstart float-lg-end ms-auto pe-0">
+                  <a href="javascript:;" class="cursor-pointer" id="dropdownTable2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-ellipsis-h text-secondary" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable2" style="">
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex align-items-center ms-4 mt-3 ps-1">
+                <div>
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Date</p>
+                  <span class="text-xs font-weight-bolder">01 October 2023</span>
+                </div>
+                <div class="mx-auto">
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Team Dev</p>
+                  <span class="text-xs font-weight-bolder">Chandra</span>
+                </div>
+              </div>
+            </div>
+            <hr class="horizontal dark mt-4 mb-0">
+          </li>
+          <li class="list-group-item border-0 flex-column align-items-start ps-0 py-0 mb-3">
+            <div class="checklist-item checklist-item-dark ps-2 ms-3">
+              <div class="d-flex align-items-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked="">
+                </div>
+                <h6 class="mb-0 text-dark font-weight-bold text-sm">Introduction MVC method</h6>
+                <div class="dropstart float-lg-end ms-auto pe-0">
+                  <a href="javascript:;" class="cursor-pointer" id="dropdownTable3" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-ellipsis-h text-secondary" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable3" style="">
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center ms-4 mt-3 ps-1">
+                <div>
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Date</p>
+                  <span class="text-xs font-weight-bolder">01 October 2023</span>
+                </div>
+                <div class="mx-auto">
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Team Dev</p>
+                  <span class="text-xs font-weight-bolder">Refi</span>
+                </div>
+              </div>
+            </div>
+            <hr class="horizontal dark mt-4 mb-0">
+          </li>
+          <li class="list-group-item border-0 flex-column align-items-start ps-0 py-0 mb-3">
+            <div class="checklist-item checklist-item-warning ps-2 ms-3">
+              <div class="d-flex align-items-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked="">
+                </div>
+                <h6 class="mb-0 text-dark font-weight-bold text-sm">Introduction constructor</h6>
+                <div class="dropstart float-lg-end ms-auto pe-0">
+                  <a href="javascript:;" class="cursor-pointer" id="dropdownTable" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-ellipsis-h text-secondary" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable" style="">
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center ms-4 mt-3 ps-1">
+                <div>
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Date</p>
+                  <span class="text-xs font-weight-bolder">01 October 2023</span>
+                </div>
+                <div class="mx-auto">
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Team Dev</p>
+                  <span class="text-xs font-weight-bolder">Chandra</span>
+                </div>
+              </div>
+            </div>
+            <hr class="horizontal dark mt-4 mb-0">
+          </li>
+          <li class="list-group-item border-0 flex-column align-items-start ps-0 py-0 mb-3">
+            <div class="checklist-item checklist-item-success ps-2 ms-3">
+              <div class="d-flex align-items-center">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                </div>
+                <h6 class="mb-0 text-dark font-weight-bold text-sm">Introduction templating view</h6>
+                <div class="dropstart float-lg-end ms-auto pe-0">
+                  <a href="javascript:;" class="cursor-pointer" id="dropdownTable1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-ellipsis-h text-secondary" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu px-2 py-3 ms-sm-n4 ms-n5" aria-labelledby="dropdownTable1" style="">
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Another action</a></li>
+                    <li><a class="dropdown-item border-radius-md" href="javascript:;">Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center ms-4 mt-3 ps-1">
+                <div>
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Date</p>
+                  <span class="text-xs font-weight-bolder">01 October 2023</span>
+                </div>
+
+                <div class="mx-auto">
+                  <p class="text-xs mb-0 text-secondary font-weight-bold">Team Dev</p>
+                  <span class="text-xs font-weight-bolder">Refi</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-12 mt-4 mt-lg-0">
+    <div class="card overflow-hidden">
+      <div class="card-header p-3 pb-0">
+        <div class="d-flex align-items-center">
+          <div class="icon icon-shape bg-gradient-info shadow text-center border-radius-md">
+            <i class="ni ni-calendar-grid-58 text-lg opacity-10" aria-hidden="true"></i>
+          </div>
+          <div class="ms-3">
+            <p class="text-sm mb-0 text-capitalize font-weight-bold">Tasks</p>
+            <h5 class="font-weight-bolder mb-0">
+              4
+            </h5>
+          </div>
+          <div class="progress-wrapper ms-auto w-25">
+            <div class="progress-info">
+              <div class="progress-percentage">
+                <span class="text-xs font-weight-bold">1%</span>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-gradient-info w-1" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body mt-3 p-0">
+        <div class="chart">
+          <canvas id="chart-line" class="chart-canvas" height="150" style="display: block; box-sizing: border-box; height: 100px; width: 865.3px;" width="1297"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="card overflow-hidden mt-4">
       <div class="card-body p-3">
         <div class="row">
-          <div class="col-lg-3 col-sm-6 col-12">
-            <button class="btn bg-gradient-success w-100 mb-0 toast-btn" type="button" id="testing" data-target="successToast">
-              Success Notification
-            </button>
+          <div class="col-lg-5">
+            <div class="d-flex">
+              <div class="icon icon-shape bg-gradient-info shadow text-center border-radius-md">
+                <i class="ni ni-delivery-fast text-lg opacity-10" aria-hidden="true"></i>
+              </div>
+              <div class="ms-3">
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Projects</p>
+                <h5 class="font-weight-bolder mb-0">
+                  1
+                </h5>
+              </div>
+            </div>
+            <span class="badge badge-dot d-block text-start pb-0 mt-3">
+              <i class="bg-gradient-info"></i>
+              <span class="text-muted text-xs font-weight-bold">Done</span>
+            </span>
+            <span class="badge badge-dot d-block text-start">
+              <i class="bg-gradient-secondary"></i>
+              <span class="text-muted text-xs font-weight-bold">In progress</span>
+            </span>
           </div>
-          <div class="col-lg-3 col-sm-6 col-12 mt-sm-0 mt-2">
-            <button class="btn bg-gradient-info w-100 mb-0 toast-btn" type="button" data-target="infoToast">
-              Info Notification
-            </button>
-          </div>
-          <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
-            <button class="btn bg-gradient-warning w-100 mb-0 toast-btn" type="button" data-target="warningToast">
-              Warning Notification
-            </button>
-          </div>
-          <div class="col-lg-3 col-sm-6 col-12 mt-lg-0 mt-2">
-            <button class="btn bg-gradient-danger w-100 mb-0 toast-btn" type="button" data-target="dangerToast">
-              Danger Notification
-            </button>
+          <div class="col-lg-7 my-auto">
+            <div class="chart ms-auto">
+              <canvas id="chart-bar" class="chart-canvas" height="225" style="display: block; box-sizing: border-box; height: 150px; width: 833.3px;" width="1249"></canvas>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="col-lg-6 mb-lg-0 mb-4">
+<div class="row mt-4">
+<div class="col-lg-6 mb-lg-0 mb-4">
     <div class="card card-body">
       <h6 class="mb-0">New Project</h6>
       <p class="text-sm mb-0">Create new project</p>
