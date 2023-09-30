@@ -1,3 +1,4 @@
+// Service Anggota
 $('.btn-view').on('click', function() {
   const first_name = $(this).data('first_name');
   const last_name = $(this).data('last_name');
@@ -24,6 +25,43 @@ $('.btn-edit').on('click', function() {
   nameModal.find('.email').val(email);
   nameModal.find('.country').val(country);
   $('.editModal').modal('show');
+});
+
+// Service Project
+$('.btn-viewproject').on('click', function() {
+  const nama_project = $(this).data('nama_project');
+  const client_project = $(this).data('client_project');
+  const teknologi_project = $(this).data('teknologi_project')
+  const biaya_project = $(this).data('biaya_project')
+  const status_project = $(this).data('status_project')
+  const lampiran_project = $(this).data('lampiran_project')
+  const nameModal = $('.viewProjectModal');
+  nameModal.find('.nama_project').val(nama_project);
+  nameModal.find('.client_project').val(client_project);
+  nameModal.find('.teknologi_project').val(teknologi_project);
+  nameModal.find('.biaya_project').val(biaya_project);
+  nameModal.find('.status_project').val(status_project);
+  nameModal.find('.lampiran_project').val(lampiran_project);
+  $('.viewProjectModal').modal('show');
+});
+
+$('.btn-editproject').on('click', function() {
+  const id = $(this).data('id');
+  const nama_project = $(this).data('nama_project');
+  const client_project = $(this).data('client_project');
+  const teknologi_project = $(this).data('teknologi_project')
+  const biaya_project = $(this).data('biaya_project')
+  const status_project = $(this).data('status_project')
+  const lampiran_project = $(this).data('lampiran_project')
+  const nameModal = $('.editProjectModal');
+  nameModal.find('.id').val(id);
+  nameModal.find('.nama_project').val(nama_project);
+  nameModal.find('.client_project').val(client_project);
+  nameModal.find('.teknologi_project').val(teknologi_project);
+  nameModal.find('.biaya_project').val(biaya_project);
+  nameModal.find('.status_project').val(status_project);
+  nameModal.find('.lampiran_project').val(lampiran_project);
+  $('.editProjectModal').modal('show');
 });
 
 function delete_dynamic(id,route,method) {

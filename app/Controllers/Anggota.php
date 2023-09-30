@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\AnggotaModel;
 
-class Pages extends BaseController
+class Anggota extends BaseController
 {
     protected $session, $validation, $anggotaModel;
     public function __construct()
@@ -25,7 +25,7 @@ class Pages extends BaseController
             'anggota' => $anggota
         ];
 
-        return view('pages/table/table', $data);
+        return view('pages/table/anggota', $data);
     }
 
     public function create()
@@ -42,7 +42,7 @@ class Pages extends BaseController
                 "country" => $this->request->getPost('country'),
             ]);
             $this->session->setFlashdata('success', 'Yeay! Success add data');
-            return redirect('table');
+            return redirect('table/anggota');
         }
     }
 
@@ -65,7 +65,7 @@ class Pages extends BaseController
                 "country" => $this->request->getPost('country')
             ]);
             $this->session->setFlashdata('success', 'Yeay! success edit data');
-            return redirect('table');
+            return redirect('table/anggota');
         }
     }
 

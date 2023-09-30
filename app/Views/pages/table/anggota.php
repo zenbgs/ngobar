@@ -54,7 +54,7 @@
                                             Edit
                                         </a>
                                         &nbsp;
-                                        <a href="javascript:;" onclick="delete_dynamic(<?= $anggota->id ?>,'/table/delete/','delete')" class="text-gradient text-danger font-weight-bold text-xs" title="Hapus anggota" data-bs-toggle="modal" data-bs-target="#hapus<?= $anggota->id ?>">
+                                        <a href="javascript:;" onclick="delete_dynamic(<?= $anggota->id ?>,'/table/anggota/delete/','delete')" class="text-gradient text-danger font-weight-bold text-xs" title="Hapus anggota" data-bs-toggle="modal" data-bs-target="#hapus<?= $anggota->id ?>">
                                             Delete
                                         </a>
                                     </td>
