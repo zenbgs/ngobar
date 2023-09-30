@@ -13,14 +13,6 @@ class Pages extends BaseController
         $this->session = \Config\Services::session();
         $this->validation = \Config\Services::validation();
     }
-    public function index()
-    {
-        $data = [
-            'title' => 'Ade | BelajarWeb'
-        ];
-        return view('pages/index', $data);
-    }
-
 
     public function table()
     {
