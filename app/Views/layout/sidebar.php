@@ -32,7 +32,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link active collapsed" aria-controls="dashboardsExamples" role="button" aria-expanded="true">
+        <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link" aria-controls="dashboardsExamples" role="button" aria-expanded="false">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center d-flex align-items-center justify-content-center  me-2">
             <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>shop </title>
@@ -50,10 +50,10 @@
           </div>
           <span class="nav-link-text ms-1">Table</span>
         </a>
-        <div class="collapse" id="dashboardsExamples" style="">
+        <div class="collapse" id="dashboardsExamples">
           <ul class="nav ms-4 ps-3">
-            <li class="nav-item active">
-              <a class="nav-link active" href="<?= base_url() ?>table/anggota">
+            <li class="nav-item">
+              <a class="nav-link" href="<?= base_url() ?>table/anggota">
                 <span class="sidenav-mini-icon"> D </span>
                 <span class="sidenav-normal"> Anggota </span>
               </a>

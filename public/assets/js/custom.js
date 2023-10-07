@@ -9,7 +9,13 @@ $(function () {
       }
     }
     if ($this.attr("href").indexOf(current) !== -1 && current != "/") {
-      $this.addClass("active");
+      $this.closest(".collapse").addClass("show")
+      $this.closest(".nav-link").addClass("active")
+      $this.parents(".nav-item").each(function(index, elem){
+        if(index == 1){
+          $(this).children('.nav-link').addClass('active');
+        }
+      })
     }
   });
 });
