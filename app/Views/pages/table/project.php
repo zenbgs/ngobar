@@ -26,6 +26,8 @@
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Status</th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Anggota</th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Lampiran</th>
                                 <th class="text-secondary opacity-7"></th>
                             </tr>
@@ -40,37 +42,40 @@
                                         <div class="d-flex px-2 py-1">
 
                                             <div class="d-flex flex-column justify-content-center">
-                                                <span class="mb-0 text-sm"><?= $project->nama_project ?></span>
-                                                <p class="text-xs text-secondary mb-0"><?= $project->client_project ?></p>
+                                                <span class="mb-0 text-sm"><?= $project['nama_project'] ?></span>
+                                                <p class="text-xs text-secondary mb-0"><?= $project['client_project'] ?></p>
                                             </div>
                                         </div>
                                     </td>
                                     <td>
                                         <!-- <p class="text-xs font-weight-bold mb-0">Manager</p> -->
-                                        <p class="text-xs text-center text-secondary mb-0"><?= $project->teknologi_project ?></p>
+                                        <p class="text-xs text-center text-secondary mb-0"><?= $project['teknologi_project'] ?></p>
                                     </td>
                                     <td>
                                         <!-- <p class="text-xs font-weight-bold mb-0">Manager</p> -->
-                                        <p class="text-xs text-center text-secondary mb-0"><?= $project->biaya_project ?></p>
+                                        <p class="text-xs text-center text-secondary mb-0"><?= $project['biaya_project'] ?></p>
                                     </td>
                                     <td>
                                         <!-- <p class="text-xs font-weight-bold mb-0">Manager</p> -->
-                                        <p class="text-xs text-center text-secondary mb-0"><?= $project->status_project ?></p>
+                                        <p class="text-xs text-center text-secondary mb-0"><?= $project['status_project'] ?></p>
+                                    </td>
+                                    <td>
+                                        <p class="text-xs text-center text-secondary mb-0"><?= implode(",", $project['anggota']) ?></p>
                                     </td>
                                     <td>
                                         <!-- <p class="text-xs font-weight-bold mb-0">Manager</p> -->
-                                        <p class="text-xs text-center text-secondary mb-0"><?= $project->lampiran_project ?></p>
+                                        <p class="text-xs text-center text-secondary mb-0"><?= $project['lampiran_project'] ?></p>
                                     </td>
                                     <td class="align-middle">
-                                        <a href="javascript:;" class="text-gradient btn-viewproject text-success font-weight-bold text-xs" data-id="<?= $project->id ?>" data-nama_project="<?= $project->nama_project ?>" data-client_project="<?= $project->client_project ?>" data-teknologi_project="<?= $project->teknologi_project ?>" data-biaya_project="<?= $project->biaya_project ?>" data-status_project="<?= $project->status_project ?>" data-lampiran_project="<?= $project->lampiran_project ?>" data-toggle="tooltip" data-original-title="Lihat project">
+                                        <a href="javascript:;" class="text-gradient btn-viewproject text-success font-weight-bold text-xs" data-id="<?= $project['id'] ?>" data-nama_project="<?= $project['nama_project'] ?>" data-client_project="<?= $project['client_project'] ?>" data-teknologi_project="<?= $project['teknologi_project'] ?>" data-biaya_project="<?= $project['biaya_project'] ?>" data-status_project="<?= $project['status_project'] ?>" data-lampiran_project="<?= $project['lampiran_project'] ?>" data-toggle="tooltip" data-original-title="Lihat project">
                                             View
                                         </a>
                                         &nbsp;
-                                        <a href="javascript:;" class="text-gradient btn-editproject text-warning font-weight-bold text-xs" data-id="<?= $project->id ?>" data-nama_project="<?= $project->nama_project ?>" data-client_project="<?= $project->client_project ?>" data-teknologi_project="<?= $project->teknologi_project ?>" data-biaya_project="<?= $project->biaya_project ?>" data-status_project="<?= $project->status_project ?>" data-lampiran_project="<?= $project->lampiran_project ?>" data-toggle="tooltip" data-original-title="Edit project">
+                                        <a href="javascript:;" class="text-gradient btn-editproject text-warning font-weight-bold text-xs" data-id="<?= $project['id'] ?>" data-nama_project="<?= $project['nama_project'] ?>" data-client_project="<?= $project['client_project'] ?>" data-teknologi_project="<?= $project['teknologi_project'] ?>" data-biaya_project="<?= $project['biaya_project'] ?>" data-status_project="<?= $project['status_project'] ?>" data-lampiran_project="<?= $project['lampiran_project'] ?>" data-toggle="tooltip" data-original-title="Edit project">
                                             Edit
                                         </a>
                                         &nbsp;
-                                        <a href="javascript:;" onclick="delete_dynamic(<?= $project->id ?>,'/table/project/delete/','delete')" class="text-gradient text-danger font-weight-bold text-xs" title="Hapus project" data-bs-toggle="modal" data-bs-target="#hapus<?= $project->id ?>">
+                                        <a href="javascript:;" onclick="delete_dynamic(<?= $project['id'] ?>,'/table/project/delete/','delete')" class="text-gradient text-danger font-weight-bold text-xs" title="Hapus project" data-bs-toggle="modal" data-bs-target="#hapus<?= $project['id'] ?>">
                                             Delete
                                         </a>
                                     </td>

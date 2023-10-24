@@ -6,17 +6,33 @@ use App\Models\ProjectModel;
 
 class Project extends BaseController
 {
-    protected $session, $validation, $projectModel;
+    protected $session, $validation, $projectModel, $db;
     public function __construct()
     {
         $this->projectModel = new ProjectModel();
         $this->session = \Config\Services::session();
         $this->validation = \Config\Services::validation();
+        $this->db = \Config\Database::connect();
     }
 
     public function table()
     {
-        $project = $this->projectModel->asObject()->findAll();
+        // $project = $this->projectModel->asObject()->findAll();
+        $result = [];
+        $tampungan = [];
+        $project = $this->db->query("SELECT * FROM project")->getResultArray();
+        // array_push($result, $project);
+        foreach ($project as $key => $loop_project) {
+            $raw = $this->db->query("SELECT first_name FROM anggota WHERE id_project = '" . $loop_project['id'] . "'")->getResultArray();
+            foreach ($raw as $raw_key => $raw_result) {
+                $project[$key]['anggota'][] = $raw_result['first_name'];
+                array_push($project);
+            }
+            // $result_raw['anggota'] = $raw;
+            // array_push($project[$key], $result_raw);
+        }
+
+
 
         $data = [
             'title' => 'Table Project',
@@ -26,6 +42,8 @@ class Project extends BaseController
         ];
 
         return view('pages/table/project', $data);
+
+        // return json_encode($project);
     }
 
     public function create()
